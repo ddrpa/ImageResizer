@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: auto;
+}
+
+.configuration-pane {
+    padding: 10px;
+}
+
+.configuration-pane input[type='number'] {
+    display: inline;
+    width: 4em;
+}
+
+.drop-zone {
+    flex-grow: 1;
+    border: #000000 solid 7px;
+    border-style: double;
+    border-radius: 25px;
+    background: url(./add-file.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 125px;
+}
+
+.drop-zone.busy {
+    background: url(./loading.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 125px;
+}

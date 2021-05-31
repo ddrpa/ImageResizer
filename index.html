@@ -1,0 +1,49 @@
+<!--index.html-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>图片压缩</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="configuration-pane">
+                <input type="checkbox" name="desktop" checked />
+                <label for="desktop"
+                    >为<abbr title="宽度不超过 800 像素">桌面</abbr
+                    >浏览压缩</label
+                ><br />
+                <input type="checkbox" name="mobile" checked />
+                <label for="mobile"
+                    >为<abbr title="宽度不超过 320 像素">移动端</abbr
+                    >浏览压缩</label
+                ><br />
+                <input type="checkbox" name="customized" />
+                <label for="customized"
+                    >宽度不超过
+                    <input
+                        type="number"
+                        step="1"
+                        min="1"
+                        name="customized_width"
+                    />
+                    像素</label
+                >
+            </div>
+            <div class="drop-zone"></div>
+        </div>
+        <!-- You can also require other files to run in this process -->
+        <script src="./renderer.js"></script>
+    </body>
+</html>

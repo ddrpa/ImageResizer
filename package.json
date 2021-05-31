@@ -1,0 +1,31 @@
+{
+    "name": "image-resizer",
+    "version": "1.0.0",
+    "main": "main.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder",
+        "postinstall": "electron-builder install-app-deps"
+    },
+    "devDependencies": {
+        "electron": "^13.0.1",
+        "electron-builder": "^22.10.5",
+        "prettier": "2.3.0"
+    },
+    "dependencies": {
+        "heic-convert": "^1.2.4",
+        "sharp": "^0.28.3"
+    },
+    "build": {
+        "appId": "cc.ddrpa.ImageResizer",
+        "mac": {
+            "type": "distribution",
+            "category": "public.app-category.developer-tools",
+            "target": [
+                "dmg"
+            ]
+        }
+    }
+}
